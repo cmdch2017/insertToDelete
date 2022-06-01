@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<GridPane fx:id="rootPane" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller">
+    <children>
+
+        <Button ButtonBar.buttonData="LEFT" onMouseClicked="#choose" prefWidth="90" text="选择文件" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button ButtonBar.buttonData="RIGHT" onMouseClicked="#deletePrimary" prefWidth="100" text="删除主键" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="searchField" prefWidth="90" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ChoiceBox fx:id="outBhEncodingCbx" layoutX="139.0" layoutY="160.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="0" ButtonBar.buttonData="RIGHT">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+<!--                    <String fx:value="male" />-->
+<!--                    <String fx:value="female" />-->
+<!--                    <String fx:value="unknown" />-->
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <TableView fx:id="fileTable" prefHeight="500" prefWidth="900" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="220" text="名称">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="400" text="路径">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="path" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="sizeColumn" prefWidth="120" text="大小">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="sizeText" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="lastModifiedColumn" prefWidth="160" text="修改时间">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastModifiedText" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </children>
+</GridPane>

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DecompileTest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DecompileTest_jar</output-path>
+    <root id="archive" name="DecompileTest.jar">
+      <element id="module-output" name="DecompileTest" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.76/fastjson-1.2.76.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
