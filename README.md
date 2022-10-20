@@ -1,5 +1,7 @@
 # insertToDelete
 这个文件功能非常好，能将输入的insert语句的脚本文件转换成delete语句的脚本文件。比如insert into xxx 可以转换为delete from xxx where
+比如待处理的文件如下图所示
+![image](https://user-images.githubusercontent.com/32605664/196871532-3f327805-02f9-4af7-9bca-254942f24445.png)
 ![屏幕截图 2022-10-20 141635](https://user-images.githubusercontent.com/32605664/196870634-b6335482-b9a8-4559-b505-4aed447c8920.png)
 点击选择有insert语句的脚本文件
 ![屏幕截图 2022-10-20 141635](https://user-images.githubusercontent.com/32605664/196870835-05e35d5b-11f4-4c63-8bd5-a95c8f835261.png)
